@@ -1,0 +1,29 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 21px 17px;
+    margin-top: 50px;
+    width: 880px;
+    height: 753px;
+}
+
+.gallery__photos {
+width: 282px;
+height: 361px;
+}
+
+.gallery__photo-card {
+    width: 282px;
+    height: 282px;
+}
+
+.gallery__photo-name {
+    color: #000;
+    background-color: #fff;
+}
+
+.gallery__photo-like {
+    background: none;
+    background-image: url(/images/like.svg);
+    background-repeat: no-repeat;
+}
