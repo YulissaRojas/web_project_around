@@ -1,32 +1,40 @@
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);  
-    gap: 21px 17px;
-    margin-top: 50px;
-    width: 880px;
-    height: 753px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px 17px;
+  margin-top: 50px;
+  width: 880px;
+  height: 753px;
 }
 
 .gallery__photos {
-width: 282px;
-height: 361px;
+  width: 282px;
+  height: 361px;
 }
 
 .gallery__photo-card {
-    width: 282px;
-    height: 282px;
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .gallery__photo-name {
-    color: #000;
-    font-family: "Inter-Black", sans-serif;
-    background-color: #fff;
-    margin: 0;
+  color: #000;
+  font-family: "Inter-Black", sans-serif;
+  background-color: #fff;
+  padding: 20px;
+  margin: 0;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .gallery__photo-like {
-    background: none;
-    background-image: url(/images/like.svg);
-    background-repeat: no-repeat;
-    background-color: #fff;
+  background: none;
+  background-image: url(/images/like.svg);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  width: 21px;
+  height: 19px;
+  border: none;
 }

@@ -1,5 +1,29 @@
 .footer {
-    background-color: black;
-    color: #545454;
-    padding: 67px 762px 60px 200px;
+  background-color: black;
+  max-width: 880px;
 }
+
+.footer__copyright {
+    display: flex;
+    justify-content: flex-start;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+    margin: auto;
+    padding-top: 67px;
+}
+
+@media screen and (max-width: 880px) {
+    .footer {
+      max-width: 880px;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .footer {
+      max-width: 320px;
+    }
+  }
