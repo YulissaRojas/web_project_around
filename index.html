@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,8 +38,30 @@
             <h1 class="profile__info-name">Jacques Cousteau</h1>
             <p class="profile__info-job">Explorador</p>
           </section>
-          <button class="profile__button-edit"></button>
+          <button class="profile__button-edit" id="popup__form"></button>
           <button class="profile__button-plus">+</button>
+          <section class="popup">
+            <div class="popup__container">
+              <h2 class="popup__container-title">Editar perfil</h2>
+              <form class="popup__form">
+                <input
+                class="popup__form-name"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+              />
+              <input
+                class="popup__form-job"
+                type="text"
+                id="job"
+                name="job"
+                placeholder="Acerca de mi"
+              />
+              <button class="popup__form-save">Guardar</button>
+              </form>
+            </div>
+          </section>
         </main>
         <main class="gallery">
           <section class="gallery__photos">
@@ -48,8 +70,9 @@
               src="/images/lasvegas.jpg"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">Las Vegas</p>
+            <div class="gallery__photo-name">Las Vegas
             <button class="gallery__photo-like"></button>
+          </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -57,8 +80,9 @@
               src="/images/newyork.png"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">New York</p>
+            <div class="gallery__photo-name">New York
             <button class="gallery__photo-like"></button>
+          </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -66,35 +90,39 @@
               src="/images/chicago.png"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">Chicago</p>
+            <div class="gallery__photo-name">Chicago
             <button class="gallery__photo-like"></button>
+          </div>
           </section>
           <section class="gallery__photos">
             <img
               class="gallery__photo-card"
-              src="/images/newyork.png"
+              src="/images/sanfrancisco.png"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">San Francisco</p>
+            <div class="gallery__photo-name">San Francisco
             <button class="gallery__photo-like"></button>
+          </div>
           </section>
           <section class="gallery__photos">
             <img
               class="gallery__photo-card"
-              src="/images/newyork.png"
+              src="/images/boston.png"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">Boston</p>
+            <div class="gallery__photo-name">Boston
             <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <section class="gallery__photos">
             <img
               class="gallery__photo-card"
-              src="/images/newyork.png"
+              src="/images/orlando.png"
               alt="fotografia"
             />
-            <p class="gallery__photo-name">Orlando</p>
+            <div class="gallery__photo-name">Orlando
             <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <footer class="footer">
             <p class="footer__copyright">© 2025 Around The U.S.</p>
