@@ -1,3 +1,9 @@
-.popup {
+.popup__form {
+  width: 430px;
+  display: flex;
+  justify-content: center;
+}
 
+.popup_visible {
+  display: none;
 }

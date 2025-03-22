@@ -38,30 +38,28 @@
             <h1 class="profile__info-name">Jacques Cousteau</h1>
             <p class="profile__info-job">Explorador</p>
           </section>
-          <button class="profile__button-edit" id="popup__form"></button>
-          <button class="profile__button-plus">+</button>
-          <section class="popup">
-            <div class="popup__container">
-              <h2 class="popup__container-title">Editar perfil</h2>
-              <form class="popup__form">
-                <input
-                class="popup__form-name"
+          <button class="profile_button-edit"></button>
+          <button class="profile_button-plus">+</button>
+          <div class="popup popup_visible">
+            <form class="popup__form">
+              <label class="popup__title">Editar perfil</label>
+              <input
+                class="popup__name"
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Nombre"
               />
               <input
-                class="popup__form-job"
+                class="popup__job"
                 type="text"
                 id="job"
                 name="job"
                 placeholder="Acerca de mi"
               />
-              <button class="popup__form-save">Guardar</button>
-              </form>
-            </div>
-          </section>
+              <button class="popup__save">Guardar</button>
+            </form>
+          </div>
         </main>
         <main class="gallery">
           <section class="gallery__photos">
@@ -70,9 +68,10 @@
               src="/images/lasvegas.jpg"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">Las Vegas
-            <button class="gallery__photo-like"></button>
-          </div>
+            <div class="gallery__photo-name">
+              Las Vegas
+              <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -80,9 +79,10 @@
               src="/images/newyork.png"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">New York
-            <button class="gallery__photo-like"></button>
-          </div>
+            <div class="gallery__photo-name">
+              New York
+              <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -90,9 +90,10 @@
               src="/images/chicago.png"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">Chicago
-            <button class="gallery__photo-like"></button>
-          </div>
+            <div class="gallery__photo-name">
+              Chicago
+              <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -100,9 +101,10 @@
               src="/images/sanfrancisco.png"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">San Francisco
-            <button class="gallery__photo-like"></button>
-          </div>
+            <div class="gallery__photo-name">
+              San Francisco
+              <button class="gallery__photo-like"></button>
+            </div>
           </section>
           <section class="gallery__photos">
             <img
@@ -110,8 +112,9 @@
               src="/images/boston.png"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">Boston
-            <button class="gallery__photo-like"></button>
+            <div class="gallery__photo-name">
+              Boston
+              <button class="gallery__photo-like"></button>
             </div>
           </section>
           <section class="gallery__photos">
@@ -120,8 +123,9 @@
               src="/images/orlando.png"
               alt="fotografia"
             />
-            <div class="gallery__photo-name">Orlando
-            <button class="gallery__photo-like"></button>
+            <div class="gallery__photo-name">
+              Orlando
+              <button class="gallery__photo-like"></button>
             </div>
           </section>
           <footer class="footer">
@@ -130,5 +134,6 @@
         </main>
       </div>
     </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

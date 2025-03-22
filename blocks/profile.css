@@ -21,7 +21,7 @@
   font-size: 18px;
 }
 
-.profile__button-edit {
+.profile_button-edit {
   background: none;
   background-image: url(/images/Edit\ Button.png);
   background-size: 10px;
@@ -34,7 +34,7 @@
   background-position: center;
 }
 
-.profile__button-plus {
+.profile_button-plus {
   background: none;
   color: #fff;
   border: 2px solid #fff;
