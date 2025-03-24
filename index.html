@@ -35,12 +35,12 @@
             />
           </section>
           <section class="profile__info">
-            <h1 class="profile__info-name">Jacques Cousteau</h1>
-            <p class="profile__info-job">Explorador</p>
+            <h1 class="profile__name">Jacques Cousteau</h1>
+            <p class="profile__job">Explorador</p>
           </section>
           <button class="profile_button-edit"></button>
           <button class="profile_button-plus">+</button>
-          <div class="popup popup_visible">
+          <div class="popup popup_opened">
             <div class="popup__container">
               <button class="popup__close"></button>
               <form class="popup__form">
@@ -48,16 +48,16 @@
                 <input
                   class="popup__name"
                   type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Nombre"
+                  id="inputname"
+                  name="inputname"
+                  placeholder="Jacques Cousteau"
                 />
                 <input
                   class="popup__job"
                   type="text"
-                  id="job"
-                  name="job"
-                  placeholder="Acerca de mi"
+                  id="inputjob"
+                  name="inputjob"
+                  placeholder="Explorador"
                 />
                 <button class="popup__save">Guardar</button>
               </form>
@@ -131,10 +131,11 @@
               <button class="gallery__photo-like"></button>
             </div>
           </section>
-          <footer class="footer">
+          
+        </main>
+        <footer class="footer">
             <p class="footer__copyright">© 2025 Around The U.S.</p>
           </footer>
-        </main>
       </div>
     </div>
     <script src="./scripts/script.js"></script>

@@ -15,12 +15,14 @@
   height: 330px;
   border-radius: 10px;
   position: absolute;
-  top: 42%;
+  top: 20%;
+  right: 25%;
   display: flex;
   flex-direction: row-reverse;
 }
 
 .popup__close {
+  position: absolute;
   background: none;
   background-image: url(/images/Close\ Icon.png);
   background-size: 40px;
@@ -31,18 +33,20 @@
   width: 40px;
   height: 40px;
   margin-bottom: 350px;
-  transform: rotate(-45deg);
+  top: -40px;
+  right: -40px;
 }
 
 .popup__form {
   width: 430px;
+  margin-bottom: 36px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   flex-direction: row-reverse;
+  justify-content: space-around;
 }
 
-.popup_visible {
+.popup_opened {
   display: none;
 }
 
@@ -50,7 +54,7 @@
   font-family: "Inter-Black", sans-serif;
   font-size: 24px;
   line-height: 100%;
-  margin-right: 215px;
+  margin-right: 225px;
   margin-top: 34px;
   margin-bottom: 54px;
 }
@@ -59,26 +63,33 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
   max-width: 358px;
   width: 100%;
   margin-bottom: 30px;
+  border-color: #c4c4c4;
+  border-width: thin;
 }
 
 .popup__job {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
   max-width: 358px;
   width: 100%;
   margin-bottom: 48px;
+  border-color: #c4c4c4;
+  border-width: thin;
+}
+
+input::placeholder {
+  color: #000000;
 }
 
 .popup__save {
   font-family: "Inter", sans-serif;
   font-weight: 400px;
-  border-radius: 1px;
+  border: 1px;
+  border-radius: 2px;
   border-style: solid;
   border-color: #c4c4c4;
   max-width: 358px;

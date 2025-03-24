@@ -1,6 +1,8 @@
 .footer {
   background-color: black;
-  max-width: 880px;
+  width: 880px;
+  margin: auto;
+  padding-bottom: 60px;
 }
 
 .footer__copyright {
