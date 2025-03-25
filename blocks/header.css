@@ -8,4 +8,18 @@ max-width: 880px;
     display: flex;
     justify-content: space-around;
     padding-top: 41px;
+    width: 100%;
 }
+
+@media screen and (max-width: 584px) and (max-width: 1280px) {
+    .gallery {
+      max-width: 1280px;
+    }
+  }
+  
+  @media screen and (min-width: 320px) and (max-width: 584px) {
+    .header__logo {
+        margin-left: 27px;
+      
+    }
+  }

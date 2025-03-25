@@ -42,3 +42,31 @@
   height: 50px;
   margin: 13px 0 14px 165px;
 }
+
+@media screen and (max-width: 584px) and (max-width: 1280px) {
+  .profile {
+    
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 584px) {
+  .profile {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+.profile__image-avatar {
+  
+}
+
+.profile_button-edit {
+  
+}
+
+  .profile_button-plus{
+    margin: auto;
+    width: 282px;
+  }
+}
