@@ -7,6 +7,7 @@
   max-width: 880px;
   margin: auto;
   top: 0;
+  z-index: 1;
 }
 
 .popup__container {
@@ -46,6 +47,15 @@
   justify-content: space-around;
 }
 
+.popup__form-add {
+  width: 430px;
+  margin-bottom: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
 .popup_opened {
   display: none;
 }
@@ -71,6 +81,28 @@
 }
 
 .popup__job {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  max-width: 358px;
+  width: 100%;
+  border: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.popup__place {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  max-width: 358px;
+  width: 100%;
+  border: 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.popup__link-photo {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;

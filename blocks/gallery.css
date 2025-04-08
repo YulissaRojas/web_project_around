@@ -3,7 +3,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 21px 17px;
   margin-top: 50px;
-  width: 880px;
+  max-width: 290px;
+  position: relative;
 }
 
 .gallery__photos {
@@ -25,6 +26,19 @@
   border-radius: 0px 0px 10px 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.gallery__trash {
+  background: none;
+  background-image: url(/images/Trash.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 10px;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  border: none;
+  position: absolute;
 }
 
 .gallery__photo-like {
