@@ -29,13 +29,13 @@
           <section class="profile__image">
             <img
               class="profile__image-avatar"
-              src="/images/Avatar.png"
+              src="/images/avatar.png"
               alt="foto de perfil"
             />
           </section>
           <section class="profile__info">
-            <h1 class="profile__name">Jacques Cousteau</h1>
-            <p class="profile__job">Explorador</p>
+            <h1 class="profile__name">Yulissa Rojas</h1>
+            <p class="profile__job">Estudiante</p>
           </section>
           <button class="profile__button-edit"></button>
           <button class="profile__button-plus">+</button>
@@ -49,17 +49,48 @@
                   type="text"
                   id="inputname"
                   name="inputname"
-                  placeholder="Jacques Cousteau"
+                  placeholder="Yulissa Rojas"
                 />
                 <input
                   class="popup__job"
                   type="text"
                   id="inputjob"
                   name="inputjob"
-                  placeholder="Explorador"
+                  placeholder="Estudiante"
                 />
                 <button class="popup__save">Guardar</button>
               </form>
+            </div>
+          </div>
+          <div class="place-popup popup_opened-card">
+            <div class="place-popup__container">
+              <button class="place-popup__close"></button>
+              <form class="place-popup__form">
+                <label class="popup__title">Nuevo Lugar</label>
+                <input
+                  class="popup__name"
+                  type="text"
+                  id="inputname"
+                  name="inputname"
+                  placeholder="Titulo"
+                />
+                <input
+                  class="popup__job"
+                  type="text"
+                  id="inputjob"
+                  name="inputjob"
+                  placeholder="Enlace de la imagen"
+                />
+                <button class="popup__create">Crear</button>
+              </form>
+            </div>
+            <div class="popup-photos popup_opened-photo">
+              <button class="popup__close"></button>
+              <div class="popup-photos__container">
+                <div class="popup-photos__images">
+                  <img class="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

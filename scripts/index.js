@@ -9,14 +9,21 @@ const inputJob = document.querySelector("#inputjob");
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 
-const popupAdd = document.querySelector(".profile__button-plus");
+const popupPlace = document.querySelector(".place-popup");
+const popupPlus = document.querySelector(".profile__button-plus");
+const popupClose2 = document.querySelector(".place-popup__close");
+const popupCreate = document.querySelector(".popup__create");
 
 popupButton.addEventListener("click", () => {
   popup.classList.remove("popup_opened");
 });
 
-popupAdd.addEventListener("click", () => {
-  popup.classList.remove("popup_opened");
+popupPlus.addEventListener("click", () => {
+  popupPlace.classList.remove("popup_opened-card");
+});
+
+popupCreate.addEventListener("click", () => {
+  popupPlace.classList.remove("popup_opened-card");
 });
 
 popupSave.addEventListener("click", (e) => {
@@ -24,13 +31,21 @@ popupSave.addEventListener("click", (e) => {
   profileName.textContent = inputName.value;
   profileJob.textContent = inputJob.value;
   popup.classList.add("popup_opened");
-  popupAdd.classList.add("popup_opened");
 });
 
 popupClose.addEventListener("click", (e) => {
   e.preventDefault(); //ESTO EVITA QUE ACTUALICE
   popup.classList.add("popup_opened");
-  popup.classList.add("popup_opened");
+});
+
+popupCreate.addEventListener("click", (e) => {
+  e.preventDefault(); //ESTO EVITA QUE ACTUALICE
+  popupPlace.classList.add("popup_opened-card");
+});
+
+popupClose2.addEventListener("click", (e) => {
+  e.preventDefault(); //ESTO EVITA QUE ACTUALICE
+  popupPlace.classList.add("popup_opened-card");
 });
 
 //EL TEXTO DE LOS P SE LEE CON TEXTCONTENT
@@ -62,3 +77,14 @@ const initialCards = [
     link: "/images/orlando.png",
   },
 ];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const likedButton = document.querySelectorAll(".gallery__photo-like");
+
+  likedButton.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("gallery__photo-liked");
+      button.classList.contains("gallery__photo-like");
+    });
+  });
+});
