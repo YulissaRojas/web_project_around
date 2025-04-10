@@ -48,9 +48,6 @@ popupClose2.addEventListener("click", (e) => {
   popupPlace.classList.add("popup_opened-card");
 });
 
-//EL TEXTO DE LOS P SE LEE CON TEXTCONTENT
-//EL TEXTO DINAMICO DE LOS INPUT SE LEE CON VALUE
-
 const initialCards = [
   {
     name: "Las Vegas",
@@ -78,6 +75,8 @@ const initialCards = [
   },
 ];
 
+//BOTON DE MEGUSTA
+
 document.addEventListener("DOMContentLoaded", () => {
   const likedButton = document.querySelectorAll(".gallery__photo-like");
 
@@ -88,3 +87,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//BOTON PARA BORRAR
+
+document.addEventListener("DOMContentLoaded", () => {
+  const deleteButtons = document.querySelectorAll(".gallery__trash");
+
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".gallery__photos");
+      if (card) {
+        card.remove();
+      }
+    });
+  });
+});
+
+//AGREGAR FOTO
+
+const inputTitle = document.querySelector("#inputtitle");
+const inputPhoto = document.querySelector("#inputphoto");
+const gallery = document.querySelector(".gallery");
+
+popupCreate.addEventListener("click"),
+  (evt) => {
+    evt.preventDefault();
+
+    const clon = template.cloneNode(true);
+
+    const title = clon.querySelector(".title");
+    const image = clon.querySelector(".image");
+
+    title.textContent = inputtitle.value();
+    image.src = inputphoto.value();
+    button.addEventListener("click", () => {
+      console.log(image.src);
+    });
+
+    initialCards.appendChild(clon);
+  };
