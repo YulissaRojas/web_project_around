@@ -1,3 +1,4 @@
+const template = document.querySelector("#template").content;
 const popupSave = document.querySelector(".popup__save");
 const popupButton = document.querySelector(".profile__button-edit");
 const popup = document.querySelector(".popup");
@@ -75,6 +76,25 @@ const initialCards = [
   },
 ];
 
+//ZOOM EN IMAGEN
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popupImg = document.getElementById(".popup-img");
+  const popupClose3 = document.querySelector(".popup-img__close");
+
+  popupClose3.addEventListener("click", () => {
+    popup.classList.add("popup-img_opened");
+    popupImg.src = "";
+  });
+
+  document.querySelector(".gallery__photo-card").forEach((img) => {
+    img.addEventListener("click", () => {
+      popupImg.src = img.src;
+      popup.classList.remove("popup-img_opened");
+    });
+  });
+});
+
 //BOTON DE MEGUSTA
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -107,9 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const inputTitle = document.querySelector("#inputtitle");
 const inputPhoto = document.querySelector("#inputphoto");
-const gallery = document.querySelector(".gallery");
+const buttonAgregar = document.querySelector(".popup__create");
 
-popupCreate.addEventListener("click"),
+buttonAgregar.addEventListener("click"),
   (evt) => {
     evt.preventDefault();
 
@@ -118,11 +138,11 @@ popupCreate.addEventListener("click"),
     const title = clon.querySelector(".title");
     const image = clon.querySelector(".image");
 
-    title.textContent = inputtitle.value();
-    image.src = inputphoto.value();
+    title.textContent = inputtitle.value;
+    image.src = inputphoto.value;
     button.addEventListener("click", () => {
       console.log(image.src);
     });
 
-    initialCards.appendChild(clon);
+    cards.prepend(clon);
   };

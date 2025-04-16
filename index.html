@@ -84,12 +84,18 @@
                 <button class="popup__create">Crear</button>
               </form>
             </div>
-            <div class="popup-photos popup_opened-photo">
-              <button class="popup__close"></button>
-              <div class="popup-photos__container">
-                <div class="popup-photos__images">
-                  <img class="" />
+            <div class="newcards">
+              <template id="template">
+                <div class="card">
+                  <h1 class="title">Lugar</h1>
+                  <img class="image" src="" alt="" />
                 </div>
+              </template>
+            </div>
+            <div class="popup-img popup-img_opened">
+              <div class="popup-img_content">
+                <button class="popup-img__close"></button>
+                <img id="popup-img" src="" alt="Vista ampliada" />
               </div>
             </div>
           </div>

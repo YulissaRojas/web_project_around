@@ -113,6 +113,49 @@
   display: none;
 }
 
+.popup-img_opened {
+  display: none;
+}
+
+.popup-img {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  max-width: 880px;
+  margin: auto;
+  top: 0;
+  z-index: 1;
+}
+
+.popup-img_content {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20%;
+  right: 25%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.popup-img__close {
+  position: absolute;
+  background: none;
+  background-image: url(/images/Close\ Icon.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #000000;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 350px;
+  top: -40px;
+  right: -40px;
+}
+
 .popup__title {
   font-family: "Inter-Black", sans-serif;
   font-size: 24px;
