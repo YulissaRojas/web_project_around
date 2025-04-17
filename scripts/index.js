@@ -79,47 +79,13 @@ const initialCards = [
 //ZOOM EN IMAGEN
 
 document.addEventListener("DOMContentLoaded", () => {
-  const popupImg = document.getElementById(".popup-img");
+  const popupImg = document.getElementById("popup-img");
+  const popupImgContainer = document.querySelector(".popup-img");
   const popupClose3 = document.querySelector(".popup-img__close");
 
   popupClose3.addEventListener("click", () => {
-    popup.classList.add("popup-img_opened");
+    popupImgContainer.classList.remove("popup-img_opened");
     popupImg.src = "";
-  });
-
-  document.querySelector(".gallery__photo-card").forEach((img) => {
-    img.addEventListener("click", () => {
-      popupImg.src = img.src;
-      popup.classList.remove("popup-img_opened");
-    });
-  });
-});
-
-//BOTON DE MEGUSTA
-
-document.addEventListener("DOMContentLoaded", () => {
-  const likedButton = document.querySelectorAll(".gallery__photo-like");
-
-  likedButton.forEach((button) => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("gallery__photo-liked");
-      button.classList.contains("gallery__photo-like");
-    });
-  });
-});
-
-//BOTON PARA BORRAR
-
-document.addEventListener("DOMContentLoaded", () => {
-  const deleteButtons = document.querySelectorAll(".gallery__trash");
-
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const card = button.closest(".gallery__photos");
-      if (card) {
-        card.remove();
-      }
-    });
   });
 });
 
@@ -129,20 +95,42 @@ const inputTitle = document.querySelector("#inputtitle");
 const inputPhoto = document.querySelector("#inputphoto");
 const buttonAgregar = document.querySelector(".popup__create");
 
-buttonAgregar.addEventListener("click"),
-  (evt) => {
-    evt.preventDefault();
+buttonAgregar.addEventListener("click", (evt) => {
+  evt.preventDefault();
 
-    const clon = template.cloneNode(true);
+  const clon = template.cloneNode(true);
+  const title = clon.querySelector(".title");
+  const image = clon.querySelector(".gallery__photo-card");
 
-    const title = clon.querySelector(".title");
-    const image = clon.querySelector(".image");
+  title.textContent = inputTitle.value;
+  image.src = inputPhoto.value;
 
-    title.textContent = inputtitle.value;
-    image.src = inputphoto.value;
-    button.addEventListener("click", () => {
-      console.log(image.src);
-    });
+  document.querySelector(".newcards").prepend(clon);
+});
 
-    cards.prepend(clon);
-  };
+function activarEventosEnCard(cardElement) {
+  const img = cardElement.querySelector(".gallery__photo-card");
+  const trash = cardElement.querySelector(".gallery__trash");
+  const like = cardElement.querySelector(".gallery__photo-like");
+
+  img.addEventListener("click", () => {
+    const popupImg = document.getElementById("popup-img");
+    const popupImgContainer = document.querySelector(".popup-img");
+    popupImg.src = img.src;
+    popupImgContainer.classList.add("popup-img_opened");
+  });
+
+  trash.addEventListener("click", () => {
+    cardElement.remove();
+  });
+
+  like.addEventListener("click", () => {
+    like.classList.toggle("gallery__photo-liked");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".gallery__photos").forEach((card) => {
+    activarEventosEnCard(card);
+  });
+});

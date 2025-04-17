@@ -84,23 +84,10 @@
                 <button class="popup__create">Crear</button>
               </form>
             </div>
-            <div class="newcards">
-              <template id="template">
-                <div class="card">
-                  <h1 class="title">Lugar</h1>
-                  <img class="image" src="" alt="" />
-                </div>
-              </template>
-            </div>
-            <div class="popup-img popup-img_opened">
-              <div class="popup-img_content">
-                <button class="popup-img__close"></button>
-                <img id="popup-img" src="" alt="Vista ampliada" />
-              </div>
-            </div>
           </div>
         </div>
         <div class="gallery">
+          <div class="newcards"></div>
           <div class="gallery__photos">
             <img
               class="gallery__photo-card"
@@ -179,6 +166,24 @@
         <p class="footer__copyright">&copy; 2025 Around The U.S.</p>
       </footer>
     </div>
+    <template id="template">
+      <div class="gallery__photos">
+        <img class="gallery__photo-card" src="" alt="fotografía" />
+        <button type="button" class="gallery__trash"></button>
+        <div class="gallery__photo-name">
+          <span class="title"></span>
+          <button type="button" class="gallery__photo-like"></button>
+        </div>
+      </div>
+    </template>
+
+    <div class="popup-img">
+      <div class="popup-img__content">
+        <button class="popup-img__close"></button>
+        <img id="popup-img" class="popup-img__image" src="" alt="Vista ampliada" />
+      </div>
+    </div>
+    
     <script src="./scripts/index.js"></script>
   </body>
 </html>

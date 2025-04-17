@@ -6,6 +6,16 @@
   max-width: 290px;
 }
 
+.newcards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.newcards:empty {
+  display: none;
+}
+
 .gallery__photos {
   position: relative;
   height: 361px;
