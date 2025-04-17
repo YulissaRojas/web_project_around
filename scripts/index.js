@@ -94,19 +94,23 @@ document.addEventListener("DOMContentLoaded", () => {
 const inputTitle = document.querySelector("#inputtitle");
 const inputPhoto = document.querySelector("#inputphoto");
 const buttonAgregar = document.querySelector(".popup__create");
+const newCardsContainer = document.querySelector(".newcards");
 
 buttonAgregar.addEventListener("click", (evt) => {
   evt.preventDefault();
 
-  const clon = template.cloneNode(true);
+  const clon = document.importNode(template, true).firstElementChild;
+
   const title = clon.querySelector(".title");
   const image = clon.querySelector(".gallery__photo-card");
 
   title.textContent = inputTitle.value;
   image.src = inputPhoto.value;
 
-  document.querySelector(".newcards").prepend(clon);
+  newCardsContainer.prepend(clon);
+  activarEventosEnCard(clon);
 });
+
 
 function activarEventosEnCard(cardElement) {
   const img = cardElement.querySelector(".gallery__photo-card");
@@ -129,7 +133,7 @@ function activarEventosEnCard(cardElement) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   document.querySelectorAll(".gallery__photos").forEach((card) => {
     activarEventosEnCard(card);
   });

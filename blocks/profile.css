@@ -37,6 +37,7 @@
   margin-bottom: 28px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .profile__button-edit:hover {
@@ -51,6 +52,7 @@
   width: 150px;
   height: 50px;
   margin: 13px 0 14px 165px;
+  cursor: pointer;
 }
 
 .profile__button-plus:hover {
