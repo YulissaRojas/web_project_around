@@ -42,30 +42,43 @@
           <div class="popup popup_opened">
             <div class="popup__container">
               <button class="popup__close"></button>
-              <form class="popup__form">
+              <form class="popup__form" novalidate>
                 <label class="popup__title">Editar perfil</label>
                 <input
                   class="popup__name"
                   type="text"
                   id="inputname"
                   name="inputname"
-                  placeholder="Yulissa Rojas"
+                  placeholder="Nombre"
+                  maxlength="40"
+                  minlength="2"
+                  required
                 />
+                <span class=""></span>
                 <input
                   class="popup__job"
                   type="text"
                   id="inputjob"
                   name="inputjob"
-                  placeholder="Estudiante"
+                  placeholder="Acerca de"
+                  maxlength="200"
+                  minlength="2"
+                  required
                 />
-                <button class="popup__save">Guardar</button>
+                <button
+                  class="popup__save popup__save_disabled"
+                  type="submit"
+                  disabled
+                >
+                  Guardar
+                </button>
               </form>
             </div>
           </div>
-          <div class="place-popup popup_opened-card">
+          <div class="popup place-popup popup_opened-card">
             <div class="place-popup__container">
               <button class="place-popup__close"></button>
-              <form class="place-popup__form">
+              <form class="place-popup__form" novalidate>
                 <label class="popup__title">Nuevo Lugar</label>
                 <input
                   class="popup__name"
@@ -73,6 +86,9 @@
                   id="inputtitle"
                   name="inputtitle"
                   placeholder="Titulo"
+                  maxlength="30"
+                  minlength="2"
+                  required
                 />
                 <input
                   class="popup__job"
@@ -80,8 +96,15 @@
                   id="inputphoto"
                   name="inputphoto"
                   placeholder="Enlace de la imagen"
+                  type="url"
+                  required
                 />
-                <button class="popup__create">Crear</button>
+                <button
+                  class="popup__create popup__create_disabled"
+                  type="submit"
+                >
+                  Crear
+                </button>
               </form>
             </div>
           </div>
@@ -180,10 +203,15 @@
     <div class="popup-img">
       <div class="popup-img__content">
         <button class="popup-img__close"></button>
-        <img id="popup-img" class="popup-img__image" src="" alt="Vista ampliada" />
+        <img
+          id="popup-img"
+          class="popup-img__image"
+          src=""
+          alt="Vista ampliada"
+        />
       </div>
     </div>
-    
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>

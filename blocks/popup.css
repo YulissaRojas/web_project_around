@@ -162,7 +162,6 @@
   border-radius: 10px;
 }
 
-
 .popup-img__close {
   position: absolute;
   background: none;
@@ -210,6 +209,12 @@
   border-bottom: 1px solid #000;
 }
 
+.popup__name:invalid,
+.popup__job:invalid {
+  border: 2px solid red;
+  outline: none;
+}
+
 .popup__place {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -254,6 +259,22 @@ input::placeholder {
 .popup__save:hover {
   color: #ffff;
   background-color: #5e5d5d;
+}
+
+.popup__save_disabled {
+  background-color: #f7f3f3;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.popup__create_disabled {
+  background-color: #f7f3f3;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .popup__create {

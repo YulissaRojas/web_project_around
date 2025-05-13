@@ -52,11 +52,11 @@ popupClose2.addEventListener("click", (e) => {
 const initialCards = [
   {
     name: "Las Vegas",
-    link: "/image/lasvegas.jpg",
+    link: "/images/lasvegas.jpg",
   },
   {
     name: "New York",
-    link: "/image/newyork.jpg",
+    link: "/images/newyork.jpg",
   },
   {
     name: "Chicago",
@@ -111,7 +111,6 @@ buttonAgregar.addEventListener("click", (evt) => {
   activarEventosEnCard(clon);
 });
 
-
 function activarEventosEnCard(cardElement) {
   const img = cardElement.querySelector(".gallery__photo-card");
   const trash = cardElement.querySelector(".gallery__trash");
@@ -138,3 +137,47 @@ window.addEventListener("load", () => {
     activarEventosEnCard(card);
   });
 });
+
+// VALIDACION DE FORMULARIOS Y BOTONES
+
+const editForm = document.querySelector(".popup__form");
+const nameInput = editForm.querySelector("#inputname");
+const aboutInput = editForm.querySelector("#inputjob");
+const saveButton = editForm.querySelector(".popup__save");
+
+function checkFormValidity() {
+  if (editForm.checkValidity()) {
+    saveButton.disabled = false;
+    saveButton.classList.remove("popup__save_disabled");
+  } else {
+    saveButton.disabled = true;
+    saveButton.classList.add("popup__save_disabled");
+  }
+}
+
+[nameInput, aboutInput].forEach((input) => {
+  input.addEventListener("input", checkFormValidity);
+});
+
+checkFormValidity();
+
+// ----------
+
+const placeForm = document.querySelector(".place-popup__form");
+const createButton = placeForm.querySelector(".popup__create");
+
+placeForm.addEventListener("input", () => {
+  if (placeForm.checkValidity()) {
+    createButton.disabled = false;
+    createButton.classList.remove("popup__create_disabled");
+  } else {
+    createButton.disabled = true;
+    if (!createButton.classList.contains("popup__create_disabled")) {
+      createButton.classList.add("popup__create_disabled");
+    }
+  }
+});
+
+// CERRAR CON SUPERPOSICIÓN Y TECLA ESC
+
+
