@@ -178,6 +178,43 @@ placeForm.addEventListener("input", () => {
   }
 });
 
-// CERRAR CON SUPERPOSICIÓN Y TECLA ESC
+// CERRAR POPUP CON TECLA ESC
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    // Cierra el popup de editar perfil si está abierto
+    if (!popup.classList.contains("popup_opened")) {
+      popup.classList.add("popup_opened");
+    }
 
+    // Cierra el popup de crear tarjeta si está abierto
+    if (!popupPlace.classList.contains("popup_opened-card")) {
+      popupPlace.classList.add("popup_opened-card");
+    }
+
+    // Cierra el popup de imagen si está abierto
+    const popupImgContainer = document.querySelector(".popup-img");
+    if (popupImgContainer.classList.contains("popup-img_opened")) {
+      popupImgContainer.classList.remove("popup-img_opened");
+    }
+  }
+});
+
+// CERRAR POPUP CON SUPERPOSICION
+
+document.addEventListener("mousedown", (e) => {
+  if (e.target.classList.contains("popup")) {
+    popup.classList.add("popup_opened");
+  }
+
+  // Cerrar popup de creación de tarjetas
+  if (e.target.classList.contains("place-popup")) {
+    popupPlace.classList.add("popup_opened-card");
+  }
+
+  // Cerrar popup de zoom en imagen
+  const popupImgContainer = document.querySelector(".popup-img");
+  if (e.target.classList.contains("popup-img")) {
+    popupImgContainer.classList.remove("popup-img_opened");
+  }
+});
