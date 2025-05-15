@@ -163,19 +163,30 @@ checkFormValidity();
 
 // ----------
 
-const placeForm = document.querySelector(".place-popup__form");
-const createButton = placeForm.querySelector(".popup__create");
+const formPlace = document.querySelector(".place-popup__form");
 
-placeForm.addEventListener("input", () => {
-  if (placeForm.checkValidity()) {
-    createButton.disabled = false;
-    createButton.classList.remove("popup__create_disabled");
+function validarFormulario() {
+  const esTituloValido = inputTitle.validity.valid;
+  const esFotoValida = inputPhoto.validity.valid;
+
+  if (esTituloValido && esFotoValida) {
+    buttonAgregar.disabled = false;
+    buttonAgregar.classList.remove("popup__create_disabled");
   } else {
-    createButton.disabled = true;
-    if (!createButton.classList.contains("popup__create_disabled")) {
-      createButton.classList.add("popup__create_disabled");
-    }
+    buttonAgregar.disabled = true;
+    buttonAgregar.classList.add("popup__create_disabled");
   }
+}
+
+inputTitle.addEventListener("input", validarFormulario);
+inputPhoto.addEventListener("input", validarFormulario);
+
+popupPlus.addEventListener("click", () => {
+  popupPlace.classList.remove("popup_opened-card");
+  inputTitle.value = "";
+  inputPhoto.value = "";
+  buttonAgregar.disabled = true;
+  buttonAgregar.classList.add("popup__create_disabled");
 });
 
 // CERRAR POPUP CON TECLA ESC
